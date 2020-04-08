@@ -1,0 +1,7 @@
+extends layout
+block content
+
+	each post in blog_posts
+		h3= post.title
+		h5 By #{post.name}
+		p= post.post_content
