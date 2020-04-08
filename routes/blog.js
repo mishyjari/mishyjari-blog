@@ -15,4 +15,18 @@ router.get('/', (req,res,next) => {
 	});
 });
 
+// Get New Post Page
+router.get('/new', (req,res,next) => { 
+	res.render('blog_new')
+});
+
+// Handle POST for new post
+router.post('/new', (req,res,next) => {
+	res.send(req.body)
+});
+
+// GET Edit Page
+router.get('/:id/edit', (req,res,next) => {
+	// Query DB for :id and populate form with current info
+});
 module.exports = router; 
